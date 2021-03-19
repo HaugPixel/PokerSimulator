@@ -1,20 +1,33 @@
 package main.Game.Players;
 import main.Game.Card;
 
-public class AbstractPlayer {
+public class AbstractPlayer implements IPlayer{
 
     protected Card[] hand;
     protected double stack;
-
 
     AbstractPlayer(double stack) {
         this.stack = stack;
 
     }
 
+    AbstractPlayer() {
+        this.stack = 200.0;
 
-    void setStack(double change) {
-        this.stack = change;
+    }
+
+    @Override
+    public String getName() {
+        return "erlend";
+    }
+
+    @Override
+    public double getStack() {
+        return this.stack;
+    }
+
+    public void setStack(double stack_size) {
+        this.stack = stack_size;
     }
 
     void addStack(double change) {

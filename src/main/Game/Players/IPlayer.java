@@ -6,7 +6,7 @@ public interface IPlayer {
 
     double getStack();
 
-    double setStack(double change);
+    void setStack(double stack_size);
 
 
 

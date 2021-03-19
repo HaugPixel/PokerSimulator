@@ -3,9 +3,21 @@ package main.Game;
 import main.Game.Players.IPlayer;
 
 public class Dealer {
-    Deck currentDeck;
-    IPlayer[] players;
-    long currentPot;
+    private Deck currentDeck;
+    private int rake;
+    private Table currentTable;
+
+
+    public Dealer(Table table){
+        currentTable = table;
+    }
+
+    public void dealPlayers() throws ValueException {
+        currentDeck = new Deck();
+        currentDeck.shuffleDeck();
+
+    }
+
 
 
 }
